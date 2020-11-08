@@ -6,21 +6,19 @@ import android.content.Intent
 import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 
 class SecondActivity : AppCompatActivity() {
+    companion object {
+        const val CODE = "1488"
+    }
     private val myBroadcastReceiver = MyBroadcastReceiver()
-    var tvSecond: TextView? = null
 
-        override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        initUI()
         goMyIntentService()
-    }
-
-    private fun initUI() {
-        tvSecond = findViewById(R.id.tvSecond)
     }
 
     private fun goMyIntentService() {
@@ -45,7 +43,11 @@ class SecondActivity : AppCompatActivity() {
     inner class MyBroadcastReceiver : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             val result = intent?.getStringExtra(MyIntentService.EXTRA_KEY_OUT)
-            tvSecond?.setText(result)
+            val intentMain = Intent(context, MainActivity::class.java)
+            intentMain.putExtra(CODE, result)
+            setResult(RESULT_OK, intentMain)
+            Log.d("SecCode", "$result")
+            finish()
         }
     }
 }
