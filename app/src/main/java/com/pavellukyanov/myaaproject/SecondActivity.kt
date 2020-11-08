@@ -11,7 +11,7 @@ import android.widget.TextView
 
 class SecondActivity : AppCompatActivity() {
     companion object {
-        const val CODE = "1488"
+        const val CODE = "com.pavellukyanov.myaaproject.MainActivity.REQUEST_CODE"
     }
     private val myBroadcastReceiver = MyBroadcastReceiver()
 
