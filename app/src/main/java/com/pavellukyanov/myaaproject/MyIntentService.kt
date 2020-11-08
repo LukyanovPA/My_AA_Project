@@ -6,12 +6,12 @@ import android.util.Log
 import java.util.concurrent.TimeUnit
 
 class MyIntentService constructor(name: String = "myName") : IntentService(name) {
-    val ACTION_MYINTENTSERVICE = "com.pavellukyanov.myaaproject.RESPONCE"
     val extraOut = "Кота накормили, погладили и поиграли с ним"
 
     companion object {
         const val TAG = "IntentServiceLog"
         const val EXTRA_KEY_OUT = "EXTRA_OUT"
+        const val ACTION_MYINTENTSERVICE = "com.pavellukyanov.myaaproject.RESPONCE"
     }
 
     override fun onCreate() {
