@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.TextView
 
 // статья подсказка http://developer.alexanderklimov.ru/android/activity.php
+// статья подсказка http://developer.alexanderklimov.ru/android/theory/intentservice.php
 
 class MainActivity : AppCompatActivity() {
     companion object {
