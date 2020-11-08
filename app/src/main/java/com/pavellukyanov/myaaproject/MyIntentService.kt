@@ -33,15 +33,6 @@ class MyIntentService constructor(name: String = "myName") : IntentService(name)
             Log.d("iI", "i = $i")
         }
 
-//        val tm = intent?.getIntExtra("time", 0)
-//        val label = intent?.getStringExtra("task")
-//        Log.d(TAG, "onHandleIntent start: $label")
-//
-//        if (tm != null) {
-//            TimeUnit.SECONDS.sleep(tm.toLong())
-//        }
-//        Log.d(TAG, "onHandleIntent end: $label")
-
         val responseIntent = Intent()
         responseIntent.setAction(ACTION_MYINTENTSERVICE)
         responseIntent.addCategory(Intent.CATEGORY_DEFAULT)
