@@ -15,8 +15,12 @@ class SecondActivity : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-        tvSecond = findViewById(R.id.tvSecond)
+        initUI()
         goMyIntentService()
+    }
+
+    private fun initUI() {
+        tvSecond = findViewById(R.id.tvSecond)
     }
 
     private fun goMyIntentService() {
