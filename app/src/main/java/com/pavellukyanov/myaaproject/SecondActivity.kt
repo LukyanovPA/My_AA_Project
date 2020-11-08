@@ -7,6 +7,7 @@ import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ProgressBar
 import android.widget.TextView
 
 class SecondActivity : AppCompatActivity() {
@@ -14,10 +15,13 @@ class SecondActivity : AppCompatActivity() {
         const val CODE = "com.pavellukyanov.myaaproject.MainActivity.REQUEST_CODE"
     }
     private val myBroadcastReceiver = MyBroadcastReceiver()
+    private val myUpdateBroadcastReciver = MyUpdateBroadcastReciver()
+    var progressBar: ProgressBar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
+        progressBar = findViewById(R.id.progressBar)
         goMyIntentService()
     }
 
@@ -33,11 +37,16 @@ class SecondActivity : AppCompatActivity() {
         val intentFilter = IntentFilter(MyIntentService.ACTION_MYINTENTSERVICE)
         intentFilter.addCategory(Intent.CATEGORY_DEFAULT)
         registerReceiver(myBroadcastReceiver, intentFilter)
+
+        val updateIntentFilter = IntentFilter(MyIntentService.ACTION_UPDATE)
+        updateIntentFilter.addCategory(Intent.CATEGORY_DEFAULT)
+        registerReceiver(myUpdateBroadcastReciver, updateIntentFilter)
     }
 
     override fun onDestroy() {
         super.onDestroy()
         unregisterReceiver(myBroadcastReceiver)
+        unregisterReceiver(myUpdateBroadcastReciver)
     }
 
     inner class MyBroadcastReceiver : BroadcastReceiver() {
@@ -49,6 +58,17 @@ class SecondActivity : AppCompatActivity() {
             Log.d("SecCode", "$result")
             finish()
         }
+    }
+
+    inner class MyUpdateBroadcastReciver : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            val update = intent?.getIntExtra(MyIntentService.EXTRA_KEY_UPDATE, 0)
+            if (update != null) {
+                progressBar?.setProgress(update)
+                Log.d("ActI", "i = $update")
+            }
+        }
+
     }
 }
 
