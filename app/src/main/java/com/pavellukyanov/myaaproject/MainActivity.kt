@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
 
+// статья подсказка http://developer.alexanderklimov.ru/android/activity.php
+
 class MainActivity : AppCompatActivity() {
     companion object {
         const val REQUEST_CODE = 1488
@@ -30,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                var resultStr = data?.getStringExtra(SecondActivity.CODE)
+                val resultStr = data?.getStringExtra(SecondActivity.CODE)
                 tvMain.setText(resultStr)
                 Log.d("ReCode", "result code: $resultStr")
             } else {
