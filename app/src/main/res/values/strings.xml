@@ -5,4 +5,5 @@
     <string name="image_back">Image back</string>
     <string name="movie_poster">Movie poster</string>
     <string name="gradient_for_movie_poster">Gradient for movie poster</string>
+    <string name="back">Back</string>
 </resources>
