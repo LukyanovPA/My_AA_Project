@@ -6,12 +6,7 @@
     android:background="@drawable/movie_detai"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
-        android:id="@+id/movie_detai"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/movie_detai"
-        tools:ignore="MissingConstraints">
+
     <View
         android:id="@+id/background"
         android:layout_width="match_parent"
@@ -45,5 +40,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
