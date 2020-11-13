@@ -4,4 +4,6 @@
     <string name="movie_poster">Movie poster</string>
     <string name="gradient_for_movie_poster">Gradient for movie poster</string>
     <string name="back">Back</string>
+    <string name="name">Avengers:\nEnd Game</string>
+
 </resources>
