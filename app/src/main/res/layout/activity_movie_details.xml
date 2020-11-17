@@ -117,34 +117,117 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_begin="395dp" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        style="@style/CustomRatingBar"
-        android:layout_width="87dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="4dp"
-        android:numStars="5"
-        android:stepSize="0.1"
-        android:isIndicator="true"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@id/tagLine"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="404dp" />
+    <ImageView
+        android:id="@+id/star_icon_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/star_icon"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/tagLine"
+        app:srcCompat="@drawable/staricon" />
+
+    <ImageView
+        android:id="@+id/star_icon_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/star_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_1"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_1"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_1"
+        app:srcCompat="@drawable/staricon" />
+
+    <ImageView
+        android:id="@+id/star_icon_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/star_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_2"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_2"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_2"
+        app:srcCompat="@drawable/staricon" />
+
+    <ImageView
+        android:id="@+id/star_icon_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/star_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_3"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_3"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_3"
+        app:srcCompat="@drawable/staricon" />
+
+    <ImageView
+        android:id="@+id/star_icon_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/star_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_4"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_4"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_4"
+        app:srcCompat="@drawable/stariconempty" />
 
     <TextView
         android:id="@+id/votes"
-        android:layout_width="112dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="4dp"
-        android:numStars="5"
-        android:text="@string/votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:fontFamily="@font/robotoblack"
-        android:gravity="center_vertical|center_horizontal|start"
-        app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toEndOf="@id/ratingBar"
-        app:layout_constraintTop_toBottomOf="@id/tagLine" />
+        android:textAllCaps="true"
+        android:text="@string/votes"
+        android:textColor="@color/path_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/star_icon_5"
+        app:layout_constraintStart_toEndOf="@+id/star_icon_5"
+        app:layout_constraintTop_toTopOf="@+id/star_icon_5" />
 
+    <TextView
+        android:id="@+id/storyLineName"
+        android:layout_width="343dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/story_line"
+        android:fontFamily="@font/robotoblack"
+        android:textStyle="bold"
+        android:textAppearance="@style/StoryLineName"
+        android:lineSpacingExtra="4sp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/votes"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <TextView
+        android:id="@+id/storyLineText"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:text="@string/story_line_text"
+        android:fontFamily="@font/robotoregular"
+        android:textStyle="normal"
+        android:textAppearance="@style/after_the_d"
+        android:lineSpacingExtra="4sp"
+        android:alpha="0.75"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/storyLineName"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"/>
+
+    <TextView
+        android:id="@+id/casts"
+        android:layout_width="243dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/casts"
+        android:fontFamily="@font/robotoblack"
+        android:textStyle="bold"
+        android:textAppearance="@style/heading"
+        android:lineSpacingExtra="8sp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/storyLineText"
+        app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

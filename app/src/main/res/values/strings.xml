@@ -8,5 +8,9 @@
     <string name="some_id">13+</string>
     <string name="tag">Action, Adventure, Fantasy</string>
     <string name="votes">125 Reviews</string>
+    <string name="star_icon">Star Icon</string>
+    <string name="story_line">Storyline</string>
+    <string name="story_line_text">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="casts">Cast</string>
 
 </resources>
