@@ -131,4 +131,19 @@
 
     </style>
 
+    <style name="actors">
+        <item name="android:fontFamily">
+            @font/robotoblack
+        </item>
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #D8D8D8
+        </item>
+
+    </style>
+
 </resources>
