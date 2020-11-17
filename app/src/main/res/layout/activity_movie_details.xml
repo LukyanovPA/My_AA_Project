@@ -10,11 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/test"
+        android:contentDescription="@string/image_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/image_back" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/orig"
@@ -28,14 +28,14 @@
 
     <ImageView
         android:id="@+id/maskG"
-        android:layout_width="675dp"
+        android:layout_width="1675dp"
         android:layout_height="298dp"
         android:background="@drawable/mask"
         android:contentDescription="@string/gradient_for_movie_poster"
         app:layout_constraintBottom_toBottomOf="@+id/orig"
-        app:layout_constraintEnd_toEndOf="@id/background"
+        app:layout_constraintEnd_toEndOf="@id/orig"
         app:layout_constraintStart_toStartOf="@id/background"
-        app:layout_constraintTop_toTopOf="@id/background" />
+        app:layout_constraintTop_toTopOf="@id/orig" />
 
     <Button
         android:id="@+id/buttonBack"
@@ -47,70 +47,63 @@
         android:drawableLeft="@drawable/path"
         android:elevation="4dp"
         android:fontFamily="@font/robotoregular"
+        android:gravity="center_vertical|center_horizontal|start"
         android:paddingStart="1dp"
         android:paddingEnd="48dp"
         android:text="@string/back"
         android:textAllCaps="false"
         android:textColor="@color/path_color"
         android:textSize="12sp"
-        android:gravity="center_vertical|center_horizontal|start"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
         app:layout_constraintTop_toTopOf="@+id/background" />
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/name"
-        android:layout_width="343dp"
-        android:layout_height="112dp"
-        android:layout_marginBottom="154dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/guideline4"
+    <TextView
+        android:id="@+id/some_id"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="319dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rectangle"
+        android:fontFamily="@font/robotoblack"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/some_id"
+        android:textAppearance="@style/some_id"
+        app:layout_constraintBottom_toTopOf="@id/tvName"
+        app:layout_constraintEnd_toStartOf="@id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBack">
+        app:layout_constraintTop_toBottomOf="@+id/buttonBack" />
 
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="343dp"
-            android:layout_height="80dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="32dp"
-            android:fontFamily="@font/robotoblack"
-            android:gravity="center_vertical"
-            android:lineSpacingExtra="0sp"
-            android:lineSpacingMultiplier="0.77"
-            android:text="@string/name"
-            android:textAppearance="@style/name"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="343dp"
+        android:layout_height="80dp"
+        android:fontFamily="@font/robotoblack"
+        android:gravity="center_vertical|center_horizontal|start"
+        android:lineSpacingExtra="-1sp"
+        android:lineSpacingMultiplier="0.80"
+        android:text="@string/name"
+        android:textAppearance="@style/name"
+        android:textStyle="normal|bold"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/some_id" />
 
-        <RelativeLayout
-            android:id="@+id/pg"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/some_id"
-                android:layout_width="0dp"
-                android:layout_height="16dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/robotoblack"
-                android:gravity="center_horizontal|center_vertical"
-                android:text="@string/some_id"
-                android:textAppearance="@style/some_id" />
-        </RelativeLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tagLine"
+        android:layout_width="343dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/robotoregular"
+        android:gravity="center_vertical|center_horizontal|start"
+        android:text="@string/tag"
+        android:textAppearance="@style/tag"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/tvName" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLeft"
@@ -120,13 +113,42 @@
         app:layout_constraintGuide_begin="16dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
+        android:id="@+id/guidelineRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_begin="395dp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/CustomRatingBar"
+        android:layout_width="87dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:numStars="5"
+        android:stepSize="0.1"
+        android:isIndicator="true"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@id/tagLine"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="404dp" />
+
+    <TextView
+        android:id="@+id/votes"
+        android:layout_width="112dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:numStars="5"
+        android:text="@string/votes"
+        android:fontFamily="@font/robotoblack"
+        android:gravity="center_vertical|center_horizontal|start"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@id/tagLine" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

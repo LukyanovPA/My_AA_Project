@@ -42,4 +42,22 @@
 
     </style>
 
+    <style name="tag">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+        <item name="android:textColor">
+            #FF3466
+        </item>
+
+    </style>
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+        <item name="android:minHeight">13.02dp</item>
+        <item name="android:maxHeight">12dp</item>
+    </style>
+
 </resources>
