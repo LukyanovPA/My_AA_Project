@@ -12,4 +12,5 @@
     <color name="shadowColor">#80000000</color>
     <color name="back">#6D6D80</color>
     <color name="path_color">#6D6D80</color>
+    <color name="movie_detai">#191926</color>
 </resources>

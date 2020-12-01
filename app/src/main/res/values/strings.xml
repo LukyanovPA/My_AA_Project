@@ -17,5 +17,7 @@
     <string name="chris_evans">Chris\nEvans</string>
     <string name="mark_ruffalo">Mark\nRuffalo</string>
     <string name="chris_hemsworth">Chris\nHemsworth</string>
+    <string name="movie_poster">Movie poster</string>
+    <string name="movies_list_title">Movies list</string>
 
 </resources>
