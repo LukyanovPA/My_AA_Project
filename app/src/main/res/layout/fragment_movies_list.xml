@@ -50,19 +50,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/warszawa_po"
             app:srcCompat="@drawable/movie"
-            android:foreground="@drawable/gradient_shape"/>
+            android:foreground="@drawable/mask_list"/>
 
         <TextView
             android:id="@+id/some_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:layout_marginLeft="8dp"
-            android:text="13+"
+            android:layout_marginStart="8dp"
+            android:text="@string/_13"
             android:padding="4dp"
+            android:fontFamily="@font/robotoblack"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:alpha="0.9"
+            android:gravity="center_horizontal|center_vertical"
             android:background="@drawable/rectangle"
             app:layout_constraintTop_toTopOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView" />
