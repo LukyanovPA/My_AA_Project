@@ -17,8 +17,10 @@
     <string name="chris_evans">Chris\nEvans</string>
     <string name="mark_ruffalo">Mark\nRuffalo</string>
     <string name="chris_hemsworth">Chris\nHemsworth</string>
-    <string name="movie_poster">Movie poster</string>
     <string name="movies_list_title">Movies list</string>
     <string name="_13">13+</string>
+    <string name="reviews">125 Reviews</string>
+    <string name="movie_name">Avengers: End Game</string>
+    <string name="movie_time">137 min</string>
 
 </resources>

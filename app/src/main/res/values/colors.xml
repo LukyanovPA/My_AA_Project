@@ -13,4 +13,6 @@
     <color name="back">#6D6D80</color>
     <color name="path_color">#6D6D80</color>
     <color name="movie_detai">#191926</color>
+    <color name="tag">#FF3466</color>
+    <color name="color_reviews">#6D6D80</color>
 </resources>

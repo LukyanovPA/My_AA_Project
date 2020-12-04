@@ -9,7 +9,7 @@
         <clip-path android:pathData="M0 0H166V248H0V0Z" />
         <group
             android:pivotX="65"
-            android:pivotY="156"
+            android:pivotY="158"
             android:rotation="90"
             android:scaleX="0.904"
             android:scaleY="0.904"
