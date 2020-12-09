@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.pavellukyanov.myaaproject.R
 import com.pavellukyanov.myaaproject.data.Actor
 import com.pavellukyanov.myaaproject.data.Movie
-import com.pavellukyanov.myaaproject.holders.ItemClickListener
-import com.pavellukyanov.myaaproject.holders.MovieListAdapter
-import kotlinx.android.synthetic.main.view_holder_movie.*
+import com.pavellukyanov.myaaproject.adapters.ItemClickListener
+import com.pavellukyanov.myaaproject.adapters.MovieCallback
+import com.pavellukyanov.myaaproject.adapters.MovieListAdapter
 
 class FragmentMoviesList: Fragment() {
     private var rvMovies: RecyclerView? = null
@@ -31,7 +31,15 @@ class FragmentMoviesList: Fragment() {
         rvMovies = view.findViewById(R.id.recViewMovieList)
         val adapter = MovieListAdapter(view.context, movieList, clickListener)
         rvMovies?.adapter = adapter
+        diffUtil(adapter, movieList)
         rvMovies?.layoutManager = GridLayoutManager(context, 2)
+    }
+
+    //функция тестовая, когда будут приходить реальные данные - поменять!!
+    private fun diffUtil(adapter: MovieListAdapter, movieList: List<Movie>) {
+        val dif = MovieCallback(adapter.movies, movieList)
+        val difResult: DiffUtil.DiffResult = DiffUtil.calculateDiff(dif)
+        difResult.dispatchUpdatesTo(adapter)
     }
 
     private val clickListener = object : ItemClickListener {
@@ -96,7 +104,7 @@ class FragmentMoviesList: Fragment() {
                 "Action, Adventure, Fantasy",
                 5.0F,
                 "125 Reviews",
-                "Avengers: End Game",
+                "Wonder Woman 1984",
                 "137 min",
                 listOf(
                     Actor("Robert Downey Jr.", R.drawable.rbd),

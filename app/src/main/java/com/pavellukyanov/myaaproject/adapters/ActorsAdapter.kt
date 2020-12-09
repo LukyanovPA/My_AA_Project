@@ -1,4 +1,4 @@
-package com.pavellukyanov.myaaproject.holders
+package com.pavellukyanov.myaaproject.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

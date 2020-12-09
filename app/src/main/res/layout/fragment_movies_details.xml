@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ScrollViewCount"
-    tools:context=".MovieDetailsActivity"
     android:background="@color/test"
     android:layout_height="match_parent"
     android:layout_width="match_parent">
@@ -32,7 +31,7 @@
             android:background="@android:color/transparent"
             android:drawableLeft="@drawable/path"
             android:elevation="4dp"
-            android:fontFamily="@font/robotoregular"
+            android:fontFamily="@font/robotoblack"
             android:gravity="center_vertical|center_horizontal|start"
             android:paddingStart="1dp"
             android:paddingEnd="48dp"
