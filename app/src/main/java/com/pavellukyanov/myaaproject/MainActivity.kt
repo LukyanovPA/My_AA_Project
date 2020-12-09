@@ -7,7 +7,7 @@ import com.pavellukyanov.myaaproject.data.Movie
 import com.pavellukyanov.myaaproject.fragments.FragmentMoviesDetails
 import com.pavellukyanov.myaaproject.fragments.FragmentMoviesList
 
-class MainActivity : AppCompatActivity(), MovieInstance {
+class MainActivity : AppCompatActivity()/*, MovieInstance*/ {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,12 +17,5 @@ class MainActivity : AppCompatActivity(), MovieInstance {
                 .add(R.id.flFragmetn, FragmentMoviesList())
                 .commit()
         }
-    }
-
-    override fun goInstance(movie: Movie) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.flFragmetn, FragmentMoviesDetails.newInstance(movie))
-            .addToBackStack("FragmentMovieDetails")
-            .commit()
     }
 }

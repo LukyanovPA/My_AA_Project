@@ -3,16 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardViewActor"
-    android:background="@color/test"
+    android:background="@color/movie_detai"
     android:layout_width="80dp"
     android:layout_height="118dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="109dp"
-    app:cardCornerRadius="8dp">
+    app:cardCornerRadius="12dp">
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:background="@color/movie_detai">
 
     <ImageView
         android:id="@+id/actorPhoto"
@@ -21,7 +23,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/actorName"
         tools:srcCompat="@tools:sample/avatars"
         android:contentDescription="@string/actor_photo" />
 
@@ -30,7 +31,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/actors"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/actorPhoto" />

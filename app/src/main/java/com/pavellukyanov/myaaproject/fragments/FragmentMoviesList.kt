@@ -13,6 +13,7 @@ import com.pavellukyanov.myaaproject.data.Actor
 import com.pavellukyanov.myaaproject.data.Movie
 import com.pavellukyanov.myaaproject.holders.ItemClickListener
 import com.pavellukyanov.myaaproject.holders.MovieListAdapter
+import kotlinx.android.synthetic.main.view_holder_movie.*
 
 class FragmentMoviesList: Fragment() {
     private var rvMovies: RecyclerView? = null
@@ -39,7 +40,6 @@ class FragmentMoviesList: Fragment() {
         }
     }
 
-
     private fun showMoviesDetailsFragment(movie: Movie) {
         val supportFragmentManager = activity?.supportFragmentManager
         supportFragmentManager?.beginTransaction()
@@ -47,12 +47,6 @@ class FragmentMoviesList: Fragment() {
             ?.addToBackStack("FragmentMovieDetails")
             ?.commit()
     }
-
-//    companion object {
-//        fun newInstance(): FragmentMoviesList {
-//            return FragmentMoviesList()
-//        }
-//    }
 
     fun generateMovies(): List<Movie> {
         return listOf(
@@ -74,7 +68,7 @@ class FragmentMoviesList: Fragment() {
                 "Action, Adventure, Fantasy",
                 4.0F,
                 "125 Reviews",
-                "Avengers: End Game",
+                "Black Widow",
                 "137 min",
                 listOf(
                     Actor("Robert Downey Jr.", R.drawable.rbd),
@@ -88,7 +82,7 @@ class FragmentMoviesList: Fragment() {
                 "Action, Adventure, Fantasy",
                 3.0F,
                 "125 Reviews",
-                "Avengers: End Game",
+                "Tenet",
                 "137 min",
                 listOf(
                     Actor("Robert Downey Jr.", R.drawable.rbd),

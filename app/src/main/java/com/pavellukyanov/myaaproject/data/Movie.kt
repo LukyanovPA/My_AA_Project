@@ -1,7 +1,10 @@
 package com.pavellukyanov.myaaproject.data
 
-import android.graphics.drawable.Drawable
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 
+@Parcelize
 data class Movie(
     val movieImage: Int,
     val someID: String,
@@ -10,5 +13,5 @@ data class Movie(
     val reviews: String,
     val name: String,
     val movieTime: String,
-    val actors: List<Actor>?
-)
+    val actors: @RawValue List<Actor>?
+) : Parcelable

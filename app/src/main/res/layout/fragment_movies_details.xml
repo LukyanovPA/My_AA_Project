@@ -16,22 +16,12 @@
             android:id="@+id/orig"
             android:layout_width="match_parent"
             android:layout_height="298dp"
+            android:foreground="@drawable/vector_mask"
             android:contentDescription="@string/movie_poster"
-            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/orig" />
 
-        <ImageView
-            android:id="@+id/maskG"
-            android:layout_width="1675dp"
-            android:layout_height="298dp"
-            android:background="@drawable/mask"
-            android:contentDescription="@string/gradient_for_movie_poster"
-            app:layout_constraintBottom_toBottomOf="@+id/orig"
-            app:layout_constraintEnd_toEndOf="@id/orig"
-            app:layout_constraintStart_toStartOf="@id/orig"
-            app:layout_constraintTop_toTopOf="@id/orig" />
 
         <Button
             android:id="@+id/buttonBack"

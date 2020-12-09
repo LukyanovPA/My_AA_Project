@@ -16,19 +16,9 @@ import com.pavellukyanov.myaaproject.R
 import com.pavellukyanov.myaaproject.data.Actor
 import com.pavellukyanov.myaaproject.data.Movie
 import com.pavellukyanov.myaaproject.holders.ActorsAdapter
+import kotlinx.android.synthetic.main.fragment_movies_details.*
 
 class FragmentMoviesDetails : Fragment() {
-    companion object {
-        private const val ARG_MOVIE = "movie"
-
-        fun newInstance(movie: Movie): FragmentMoviesDetails {
-            return FragmentMoviesDetails().apply {
-                arguments = bundleOf(
-                    ARG_MOVIE to movie
-                )
-            }
-        }
-    }
 
     private var rvActors: RecyclerView? = null
     private var movie: Movie? = null
@@ -42,23 +32,34 @@ class FragmentMoviesDetails : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        movie = arguments?.getParcelable(ARG_MOVIE)
+        movie = arguments?.getParcelable(MOVIE_KEY)
         val actors: List<Actor>? = movie?.actors
         rvActors = view.findViewById(R.id.recViewActors)
         val adapter = ActorsAdapter(view.context, actors)
         rvActors?.adapter = adapter
-        rvActors?.layoutManager = LinearLayoutManager(view.context)
+        rvActors?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
 
-        val moviePicture: ImageView = view.findViewById(R.id.orig)
         Glide.with(view.context)
             .load(movie?.movieImage)
-            .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-            .into(moviePicture)
+            .optionalCenterCrop()
+            .into(orig)
 
         view.findViewById<View>(R.id.buttonBack)
             .setOnClickListener {
                 activity?.onBackPressed()
             }
+    }
+
+    companion object {
+        private const val MOVIE_KEY = "movie"
+
+        fun newInstance(movie: Movie): FragmentMoviesDetails {
+            val fragment = FragmentMoviesDetails()
+            var args = Bundle()
+            args.putParcelable(MOVIE_KEY, movie)
+            fragment.arguments = args
+            return fragment
+        }
     }
 
 }

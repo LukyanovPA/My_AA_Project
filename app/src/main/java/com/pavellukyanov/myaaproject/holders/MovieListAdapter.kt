@@ -14,6 +14,7 @@ import com.pavellukyanov.myaaproject.R
 import com.pavellukyanov.myaaproject.data.Movie
 import com.pavellukyanov.myaaproject.fragments.FragmentMoviesDetails
 import com.pavellukyanov.myaaproject.fragments.FragmentMoviesList
+import kotlinx.android.extensions.LayoutContainer
 
 class MovieListAdapter(
     context: Context,
