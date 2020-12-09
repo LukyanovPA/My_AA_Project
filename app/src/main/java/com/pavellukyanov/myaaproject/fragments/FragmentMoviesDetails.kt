@@ -50,7 +50,10 @@ class FragmentMoviesDetails : Fragment() {
                 activity?.onBackPressed()
             }
         some_id.text = movie?.someID
-        tvName
+        tvName.text = movie?.name
+        tagLine.text = movie?.tag
+        ratingBarDetails.rating = movie!!.rating
+        votes.text = movie.reviews
     }
 
     companion object {

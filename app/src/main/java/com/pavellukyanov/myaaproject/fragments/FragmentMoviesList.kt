@@ -12,7 +12,7 @@ import com.pavellukyanov.myaaproject.R
 import com.pavellukyanov.myaaproject.data.Actor
 import com.pavellukyanov.myaaproject.data.Movie
 import com.pavellukyanov.myaaproject.adapters.ItemClickListener
-import com.pavellukyanov.myaaproject.adapters.MovieCallback
+import com.pavellukyanov.myaaproject.data.MovieCallback
 import com.pavellukyanov.myaaproject.adapters.MovieListAdapter
 
 class FragmentMoviesList: Fragment() {

@@ -1,7 +1,6 @@
-package com.pavellukyanov.myaaproject.adapters
+package com.pavellukyanov.myaaproject.data
 
 import androidx.recyclerview.widget.DiffUtil
-import com.pavellukyanov.myaaproject.data.Movie
 
 class MovieCallback(
     private val oldMovieList: List<Movie>,
