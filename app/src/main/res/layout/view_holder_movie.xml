@@ -5,6 +5,9 @@
     android:id="@+id/cardViewMovie"
     android:layout_width="170dp"
     android:layout_height="296dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="13dp"
+    android:layout_marginBottom="10dp"
     app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +25,6 @@
             android:layout_marginBottom="48dp"
             android:contentDescription="@string/movie_poster"
             android:foreground="@drawable/mask_list"
-            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,7 +87,7 @@
             tools:ignore="SmallSp" />
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/movieName"
             android:layout_width="154dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
@@ -105,8 +107,8 @@
             android:textAllCaps="true"
             android:textColor="@color/color_reviews"
             android:textSize="8sp"
-            app:layout_constraintStart_toStartOf="@+id/name"
-            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/movieName"
+            app:layout_constraintTop_toBottomOf="@+id/movieName"
             tools:ignore="SmallSp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

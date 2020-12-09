@@ -22,5 +22,6 @@
     <string name="reviews">125 Reviews</string>
     <string name="movie_name">Avengers: End Game</string>
     <string name="movie_time">137 min</string>
+    <string name="actor_photo">Actor Photo</string>
 
 </resources>

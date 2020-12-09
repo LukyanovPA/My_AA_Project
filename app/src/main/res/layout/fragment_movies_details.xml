@@ -229,7 +229,14 @@
             app:layout_constraintEnd_toStartOf="@id/guidelineRight"
             app:layout_constraintHorizontal_bias="0"/>
 
-        <ImageView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recViewActors"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/casts"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"/>
+
+        <!--<ImageView
             android:id="@+id/imgRBD"
             android:layout_width="80dp"
             android:layout_height="80dp"
@@ -319,7 +326,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             style="@style/actors" />
 
-
+-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
