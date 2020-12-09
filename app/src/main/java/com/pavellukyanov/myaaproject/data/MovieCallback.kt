@@ -6,6 +6,7 @@ class MovieCallback(
     private val oldMovieList: List<Movie>,
     private val newMovieList: List<Movie>
 ): DiffUtil.Callback() {
+    
     override fun getOldListSize(): Int = oldMovieList.size
 
     override fun getNewListSize(): Int = newMovieList.size
