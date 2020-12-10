@@ -1,5 +1,6 @@
 package com.pavellukyanov.myaaproject.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -38,28 +39,31 @@ class MovieListAdapter(
 
 class MovieListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    private val movieImage: ImageView? = itemView.findViewById(R.id.imageView)
-    private val someID: TextView? = itemView.findViewById(R.id.tvSomeID)
-    private val tag: TextView? = itemView.findViewById(R.id.tag)
+    private val poster: ImageView? = itemView.findViewById(R.id.poster)
+    private val minimumAge: TextView? = itemView.findViewById(R.id.minimumAge)
+    private val genres: TextView? = itemView.findViewById(R.id.genres)
     private val ratingBar: RatingBar? = itemView.findViewById(R.id.ratingBar)
-    private val reviews: TextView? = itemView.findViewById(R.id.reviews)
+    private val numberOfRatings: TextView? = itemView.findViewById(R.id.numberOfRatings)
     private val movieName: TextView? = itemView.findViewById(R.id.movieName)
     private val timeMovie: TextView? = itemView.findViewById(R.id.timeMovie)
 
     fun bind(movie: Movie) {
-        movieImage?.let {
+        poster?.let {
             Glide.with(itemView.context)
-                .load(movie.movieImage)
+                .load(movie.poster)
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-                .into(movieImage)
+                .into(poster)
         }
 
-        someID?.text = movie.someID
-        tag?.text = movie.tag
-        ratingBar?.rating = movie.rating
-        reviews?.text = movie.reviews
-        movieName?.text = movie.name
-        timeMovie?.text = movie.movieTime
+        minimumAge?.text = movie.minimumAge.toString()
+        genres?.text = movie.genres.toString()
+
+        ratingBar?.rating = movie.ratings
+        Log.d("rating", movie.ratings.toString())
+
+        numberOfRatings?.text = movie.numberOfRatings.toString()
+        movieName?.text = movie.title
+        timeMovie?.text = movie.runtime.toString()
     }
 
 }

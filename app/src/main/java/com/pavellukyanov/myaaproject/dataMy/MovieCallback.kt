@@ -1,4 +1,4 @@
-package com.pavellukyanov.myaaproject.data
+package com.pavellukyanov.myaaproject.dataMy
 
 import androidx.recyclerview.widget.DiffUtil
 

@@ -9,12 +9,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.pavellukyanov.myaaproject.R
-import com.pavellukyanov.myaaproject.data.Actor
-import com.pavellukyanov.myaaproject.data.Movie
+import com.pavellukyanov.myaaproject.dataMy.Movie
 import com.pavellukyanov.myaaproject.adapters.ItemClickListener
-import com.pavellukyanov.myaaproject.data.MovieCallback
+import com.pavellukyanov.myaaproject.dataMy.MovieCallback
 import com.pavellukyanov.myaaproject.adapters.MovieListAdapter
-import com.pavellukyanov.myaaproject.data.DataSource
+import com.pavellukyanov.myaaproject.data.loadMovies
+import com.pavellukyanov.myaaproject.dataMy.DataSource
 import kotlinx.android.synthetic.main.fragment_movies_list.*
 
 class FragmentMoviesList: Fragment() {
@@ -36,7 +36,7 @@ class FragmentMoviesList: Fragment() {
         //эта переменная нужна для DiffUtil
         val movieList = generateMovies()
         val adapter = MovieListAdapter(clickListener)
-        adapter.movies = generateMovies()
+        adapter.movies = loadMovies(context)
         recViewMovieList.adapter = adapter
         diffUtil(adapter, movieList)
         recViewMovieList.layoutManager = GridLayoutManager(context, 2)

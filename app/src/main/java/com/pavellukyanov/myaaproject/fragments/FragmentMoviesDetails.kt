@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.pavellukyanov.myaaproject.R
-import com.pavellukyanov.myaaproject.data.Actor
-import com.pavellukyanov.myaaproject.data.Movie
+import com.pavellukyanov.myaaproject.dataMy.Actor
+import com.pavellukyanov.myaaproject.dataMy.Movie
 import com.pavellukyanov.myaaproject.adapters.ActorsAdapter
 import kotlinx.android.synthetic.main.fragment_movies_details.*
 
@@ -42,7 +42,7 @@ class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
         buttonBack.setOnClickListener { activity?.onBackPressed() }
 
         with(movie) {
-            tvSomeID.text = someID
+            minimumAge.text = someID
             tvName.text = name
             tagLine.text = tag
             ratingBarDetails.rating = rating

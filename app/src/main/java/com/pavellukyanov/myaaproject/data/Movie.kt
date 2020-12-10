@@ -1,17 +1,18 @@
 package com.pavellukyanov.myaaproject.data
 
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
-import kotlinx.android.parcel.RawValue
+import com.pavellukyanov.myaaproject.data.Actor
+import com.pavellukyanov.myaaproject.data.Genre
 
-@Parcelize
-class Movie(
-    val movieImage: Int,
-    val someID: String,
-    val tag: String,
-    val rating: Float,
-    val reviews: String,
-    val name: String,
-    val movieTime: String,
-    val actors: @RawValue List<Actor>?
-) : Parcelable
+data class Movie(
+    val id: Int,
+    val title: String,
+    val overview: String,
+    val poster: String,
+    val backdrop: String,
+    val ratings: Float,
+    val numberOfRatings: Int,
+    val minimumAge: Int,
+    val runtime: Int,
+    val genres: List<Genre>,
+    val actors: List<Actor>
+)

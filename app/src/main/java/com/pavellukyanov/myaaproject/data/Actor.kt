@@ -1,7 +1,7 @@
 package com.pavellukyanov.myaaproject.data
 
-
-class Actor(
-    val actorName: String,
-    val actorPicture: Int
+data class Actor(
+    val id: Int,
+    val name: String,
+    val picture: String
 )

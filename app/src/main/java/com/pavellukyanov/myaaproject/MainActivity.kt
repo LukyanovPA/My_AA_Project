@@ -1,10 +1,7 @@
 package com.pavellukyanov.myaaproject
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.pavellukyanov.myaaproject.data.Movie
-import com.pavellukyanov.myaaproject.fragments.FragmentMoviesDetails
 import com.pavellukyanov.myaaproject.fragments.FragmentMoviesList
 
 class MainActivity : AppCompatActivity()/*, MovieInstance*/ {
