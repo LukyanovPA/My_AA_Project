@@ -5,7 +5,7 @@ import kotlinx.android.parcel.Parcelize
 import kotlinx.android.parcel.RawValue
 
 @Parcelize
-data class Movie(
+class Movie(
     val movieImage: Int,
     val someID: String,
     val tag: String,

@@ -12,26 +12,26 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.pavellukyanov.myaaproject.R
 import com.pavellukyanov.myaaproject.data.Actor
 
-class ActorsAdapter(
-    context: Context,
-    var actors: List<Actor>?
-): RecyclerView.Adapter<ActorsViewHolder>() {
-    private val inflater: LayoutInflater = LayoutInflater.from(context)
+class ActorsAdapter: RecyclerView.Adapter<ActorsViewHolder>() {
+
+    var actors: List<Actor> = emptyList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ActorsViewHolder {
-        return ActorsViewHolder(inflater.inflate(R.layout.view_holder_actor, parent, false))
+        val inflater = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_actor, parent, false)
+        return ActorsViewHolder(inflater)
     }
 
     override fun onBindViewHolder(holder: ActorsViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 
-    override fun getItemCount(): Int = actors!!.size
+    override fun getItemCount(): Int = actors.size
 
-    fun getItem(position: Int): Actor = actors!![position]
+    private fun getItem(position: Int): Actor = actors[position]
 }
 
-class ActorsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class ActorsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+
     private val actorPhoto: ImageView = itemView.findViewById(R.id.actorPhoto)
     private val actorName: TextView = itemView.findViewById(R.id.actorName)
 

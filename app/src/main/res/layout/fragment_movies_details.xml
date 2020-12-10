@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ScrollViewCount"
-    android:background="@color/test"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:background="@color/fr_movie_det_bacgr_color">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,12 +15,11 @@
             android:id="@+id/orig"
             android:layout_width="match_parent"
             android:layout_height="298dp"
-            android:foreground="@drawable/vector_mask"
             android:contentDescription="@string/movie_poster"
+            android:foreground="@drawable/vector_mask"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/orig" />
-
 
         <Button
             android:id="@+id/buttonBack"
@@ -43,7 +42,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/some_id"
+            android:id="@+id/tvSomeID"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginTop="154dp"
@@ -74,7 +73,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-            app:layout_constraintTop_toBottomOf="@id/some_id" />
+            app:layout_constraintTop_toBottomOf="@id/tvSomeID" />
 
         <TextView
             android:id="@+id/tagLine"
@@ -111,7 +110,7 @@
             style="@style/CustomRatingBar"
             android:layout_marginTop="8dp"
             app:layout_constraintStart_toStartOf="@id/guidelineLeft"
-            app:layout_constraintTop_toBottomOf="@id/tagLine"/>
+            app:layout_constraintTop_toBottomOf="@id/tagLine" />
 
         <TextView
             android:id="@+id/votes"
@@ -119,8 +118,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/robotoblack"
-            android:textAllCaps="true"
             android:text="@string/votes"
+            android:textAllCaps="true"
             android:textColor="@color/path_color"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/ratingBarDetails"
@@ -131,55 +130,55 @@
             android:layout_width="343dp"
             android:layout_height="20dp"
             android:layout_marginTop="24dp"
-            android:text="@string/story_line"
             android:fontFamily="@font/robotoblack"
-            android:textStyle="bold"
-            android:textAppearance="@style/StoryLineName"
-            android:lineSpacingExtra="4sp"
             android:gravity="center_vertical"
-            app:layout_constraintTop_toBottomOf="@id/votes"
-            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/story_line"
+            android:textAppearance="@style/StoryLineName"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/guidelineRight"
-            app:layout_constraintHorizontal_bias="0"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/votes" />
 
         <TextView
             android:id="@+id/storyLineText"
             android:layout_width="343dp"
             android:layout_height="wrap_content"
-            android:text="@string/story_line_text"
-            android:fontFamily="@font/robotoregular"
-            android:textStyle="normal"
-            android:textAppearance="@style/after_the_d"
-            android:lineSpacingExtra="4sp"
             android:alpha="0.75"
+            android:fontFamily="@font/robotoregular"
             android:gravity="center_vertical"
-            app:layout_constraintTop_toBottomOf="@id/storyLineName"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/story_line_text"
+            android:textAppearance="@style/after_the_d"
+            android:textStyle="normal"
             app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
             app:layout_constraintHorizontal_bias="0"
-            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"/>
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/storyLineName" />
 
         <TextView
             android:id="@+id/casts"
             android:layout_width="243dp"
             android:layout_height="24dp"
             android:layout_marginTop="24dp"
-            android:text="@string/casts"
             android:fontFamily="@font/robotoblack"
-            android:textStyle="bold"
-            android:textAppearance="@style/heading"
-            android:lineSpacingExtra="8sp"
             android:gravity="center_vertical"
-            app:layout_constraintTop_toBottomOf="@id/storyLineText"
-            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            android:lineSpacingExtra="8sp"
+            android:text="@string/casts"
+            android:textAppearance="@style/heading"
+            android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/guidelineRight"
-            app:layout_constraintHorizontal_bias="0"/>
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/storyLineText" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recViewActors"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/casts"
-            app:layout_constraintStart_toStartOf="@id/guidelineLeft"/>
+            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@id/casts" />
 
         <!--<ImageView
             android:id="@+id/imgRBD"

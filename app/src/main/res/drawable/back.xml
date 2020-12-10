@@ -6,13 +6,7 @@
     android:viewportWidth="42"
     android:viewportHeight="16"
     >
-
     <group>
-
-        <clip-path
-            android:pathData="M0 0H42V16H0V0Z"
-            />
-
+        <clip-path android:pathData="M0 0H42V16H0V0Z" />
     </group>
-
 </vector>
