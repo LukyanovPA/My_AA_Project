@@ -7,8 +7,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.pavellukyanov.myaaproject.R
-import com.pavellukyanov.myaaproject.dataMy.Actor
-import com.pavellukyanov.myaaproject.dataMy.Movie
+import com.pavellukyanov.myaaproject.data.Actor
+import com.pavellukyanov.myaaproject.data.Movie
 import com.pavellukyanov.myaaproject.adapters.ActorsAdapter
 import kotlinx.android.synthetic.main.fragment_movies_details.*
 
@@ -18,10 +18,13 @@ class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
         super.onViewCreated(view, savedInstanceState)
 
         val movie: Movie = requireNotNull(requireArguments().getParcelable(MOVIE_KEY))
-        val actors: List<Actor>? = movie.actors
+        initAdapter(movie.actors)
+        changeUI(movie)
+    }
 
+    private fun initAdapter(actors: List<Actor>) {
         val adapter = ActorsAdapter()
-        actors?.let { adapter.actors = it }
+        actors.let { adapter.actors = it }
         recViewActors.adapter = adapter
         recViewActors.layoutManager =
             LinearLayoutManager(
@@ -29,24 +32,30 @@ class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
                 LinearLayoutManager.HORIZONTAL,
                 false
             )
-
-        changeUI(view, movie)
     }
 
-    private fun changeUI(view: View, movie: Movie) {
-        Glide.with(view.context)
-            .load(movie.movieImage)
-            .centerCrop()
-            .into(orig)
+    private fun changeUI(movie: Movie) {
+        context?.let {
+            Glide.with(it)
+                .load(movie.poster)
+                .centerCrop()
+                .into(orig)
+        }
+
+        val geners = arrayListOf<String>()
+        movie.genres.forEach { i ->
+            geners.add(i.name)
+        }
 
         buttonBack.setOnClickListener { activity?.onBackPressed() }
 
         with(movie) {
-            minimumAge.text = someID
-            tvName.text = name
-            tagLine.text = tag
-            ratingBarDetails.rating = rating
-            votes.text = reviews
+            ageLevel.text = context?.getString(R.string.some_id, minimumAge)
+            tvName.text = title
+            tagLine.text = geners.joinToString()
+            ratingBarDetails.rating = ratings.div(2)
+            votes.text = context?.getString(R.string.votes, numberOfRatings)
+            storyLineText.text = overview
         }
     }
 

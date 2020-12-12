@@ -1,52 +1,41 @@
 package com.pavellukyanov.myaaproject.fragments
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.pavellukyanov.myaaproject.R
-import com.pavellukyanov.myaaproject.dataMy.Movie
 import com.pavellukyanov.myaaproject.adapters.ItemClickListener
-import com.pavellukyanov.myaaproject.dataMy.MovieCallback
 import com.pavellukyanov.myaaproject.adapters.MovieListAdapter
+import com.pavellukyanov.myaaproject.data.Movie
 import com.pavellukyanov.myaaproject.data.loadMovies
-import com.pavellukyanov.myaaproject.dataMy.DataSource
 import kotlinx.android.synthetic.main.fragment_movies_list.*
+import kotlinx.coroutines.*
 
-class FragmentMoviesList: Fragment() {
-    private var rvMovies: RecyclerView? = null
+class FragmentMoviesList : Fragment(R.layout.fragment_movies_list) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_movies_list, container, false)
+    private val exceptionHandler = CoroutineExceptionHandler { coroutineContext, exception ->
+        println("CoroutineExceptionHandler got $exception in $coroutineContext")
+    }
+    private val scope = CoroutineScope(
+        SupervisorJob()
+                + Dispatchers.Main
+                + exceptionHandler
+    )
 
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        initRecycler()
+    override fun onStart() {
+        super.onStart()
+        scope.launch { goNewCoroutine() }
     }
 
-    private fun initRecycler() {
-        //эта переменная нужна для DiffUtil
-        val movieList = generateMovies()
-        val adapter = MovieListAdapter(clickListener)
-        adapter.movies = loadMovies(context)
-        recViewMovieList.adapter = adapter
-        diffUtil(adapter, movieList)
-        recViewMovieList.layoutManager = GridLayoutManager(context, 2)
+    private suspend fun goNewCoroutine() {
+        val items: List<Movie> = scope.async { loadMovies(requireContext()) }.await()
+        initRecycler(items)
     }
 
-    //функция тестовая, когда будут приходить реальные данные - поменять!!
-    private fun diffUtil(adapter: MovieListAdapter, movieList: List<Movie>) {
-        val dif = MovieCallback(adapter.movies, movieList)
-        val difResult: DiffUtil.DiffResult = DiffUtil.calculateDiff(dif)
-        difResult.dispatchUpdatesTo(adapter)
+    private fun initRecycler(movies: List<Movie>) {
+            val adapter = MovieListAdapter(clickListener)
+            adapter.movies = movies
+            recViewMovieList.adapter = adapter
+            recViewMovieList.layoutManager = GridLayoutManager(context, 2)
     }
 
     private val clickListener = object : ItemClickListener {
@@ -60,9 +49,5 @@ class FragmentMoviesList: Fragment() {
             .replace(R.id.flFragmetn, FragmentMoviesDetails.newInstance(movie))
             .addToBackStack("FragmentMovieDetails")
             .commit()
-    }
-
-    private fun generateMovies(): List<Movie> {
-        return DataSource().generateMovies()
     }
 }

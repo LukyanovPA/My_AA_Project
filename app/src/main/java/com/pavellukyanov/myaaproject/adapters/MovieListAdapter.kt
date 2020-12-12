@@ -12,6 +12,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.pavellukyanov.myaaproject.R
 import com.pavellukyanov.myaaproject.data.Movie
+import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.view_holder_movie.view.*
 
 class MovieListAdapter(
     private val clickListener: ItemClickListener
@@ -37,33 +39,37 @@ class MovieListAdapter(
     fun getItem(position: Int): Movie = movies[position]
 }
 
-class MovieListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    private val poster: ImageView? = itemView.findViewById(R.id.poster)
-    private val minimumAge: TextView? = itemView.findViewById(R.id.minimumAge)
-    private val genres: TextView? = itemView.findViewById(R.id.genres)
-    private val ratingBar: RatingBar? = itemView.findViewById(R.id.ratingBar)
-    private val numberOfRatings: TextView? = itemView.findViewById(R.id.numberOfRatings)
-    private val movieName: TextView? = itemView.findViewById(R.id.movieName)
-    private val timeMovie: TextView? = itemView.findViewById(R.id.timeMovie)
+class MovieListViewHolder(override val containerView: View): RecyclerView.ViewHolder(containerView), LayoutContainer {
 
     fun bind(movie: Movie) {
-        poster?.let {
-            Glide.with(itemView.context)
+        containerView.poster.let {
+            Glide.with(containerView.context)
                 .load(movie.poster)
+                .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-                .into(poster)
+                .into(containerView.poster)
         }
 
-        minimumAge?.text = movie.minimumAge.toString()
-        genres?.text = movie.genres.toString()
+        val resId: Int = if (movie.numberOfRatings > 1000) {
+            R.drawable.vector_like
+        } else {
+            R.drawable.vector_no_like
+        }
 
-        ratingBar?.rating = movie.ratings
-        Log.d("rating", movie.ratings.toString())
+        val geners = arrayListOf<String>()
+        movie.genres.forEach { i ->
+            geners.add(i.name)
+        }
 
-        numberOfRatings?.text = movie.numberOfRatings.toString()
-        movieName?.text = movie.title
-        timeMovie?.text = movie.runtime.toString()
+        with(containerView) {
+            likeView.setImageResource(resId)
+            minimumAge.text = context.getString(R.string.some_id, movie.minimumAge)
+            genres?.text = geners.joinToString()
+            ratingBar?.rating = movie.ratings.div(2)
+            numberOfRatings?.text = context.getString(R.string.votes, movie.numberOfRatings)
+            movieName?.text = movie.title
+            timeMovie?.text = context.getString(R.string.movie_time, movie.runtime)
+        }
     }
 
 }

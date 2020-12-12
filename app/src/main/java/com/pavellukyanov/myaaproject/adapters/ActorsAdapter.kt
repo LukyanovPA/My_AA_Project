@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.pavellukyanov.myaaproject.R
-import com.pavellukyanov.myaaproject.dataMy.Actor
+import com.pavellukyanov.myaaproject.data.Actor
+import kotlinx.android.extensions.LayoutContainer
+import kotlinx.android.synthetic.main.view_holder_actor.view.*
 
 class ActorsAdapter: RecyclerView.Adapter<ActorsViewHolder>() {
 
@@ -29,18 +31,16 @@ class ActorsAdapter: RecyclerView.Adapter<ActorsViewHolder>() {
     private fun getItem(position: Int): Actor = actors[position]
 }
 
-class ActorsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-
-    private val actorPhoto: ImageView = itemView.findViewById(R.id.actorPhoto)
-    private val actorName: TextView = itemView.findViewById(R.id.actorName)
+class ActorsViewHolder(override val containerView: View): RecyclerView.ViewHolder(containerView), LayoutContainer {
 
     fun bind(actor: Actor) {
-        Glide.with(itemView.context)
-            .load(actor.actorPicture)
+        Glide.with(containerView.context)
+            .load(actor.picture)
+            .centerCrop()
             .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
-            .into(actorPhoto)
+            .into(containerView.actorPhoto)
 
-        actorName.text = actor.actorName
+        containerView.actorName.text = actor.name
     }
 
 }

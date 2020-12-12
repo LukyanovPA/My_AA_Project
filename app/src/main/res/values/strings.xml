@@ -5,9 +5,9 @@
     <string name="gradient_for_movie_poster">Gradient for movie poster</string>
     <string name="back">Back</string>
     <string name="name">Avengers:\nEnd Game</string>
-    <string name="some_id">13+</string>
+    <string name="some_id">%d+</string>
     <string name="tag">Action, Adventure, Fantasy</string>
-    <string name="votes">125 Reviews</string>
+    <string name="votes">%d REVIEWS</string>
     <string name="star_icon">Star Icon</string>
     <string name="story_line">Storyline</string>
     <string name="story_line_text">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
@@ -21,7 +21,7 @@
     <string name="_13">13+</string>
     <string name="reviews">125 Reviews</string>
     <string name="movie_name">Avengers: End Game</string>
-    <string name="movie_time">137 min</string>
+    <string name="movie_time">%d MIN</string>
     <string name="actor_photo">Actor Photo</string>
 
 </resources>

@@ -1,8 +1,9 @@
 package com.pavellukyanov.myaaproject.data
 
-import com.pavellukyanov.myaaproject.data.Actor
-import com.pavellukyanov.myaaproject.data.Genre
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
+@Parcelize
 data class Movie(
     val id: Int,
     val title: String,
@@ -15,4 +16,4 @@ data class Movie(
     val runtime: Int,
     val genres: List<Genre>,
     val actors: List<Actor>
-)
+): Parcelable
