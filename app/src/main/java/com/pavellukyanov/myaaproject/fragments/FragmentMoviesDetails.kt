@@ -35,12 +35,10 @@ class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
     }
 
     private fun changeUI(movie: Movie) {
-        context?.let {
-            Glide.with(it)
+            Glide.with(requireContext())
                 .load(movie.poster)
                 .centerCrop()
                 .into(orig)
-        }
 
         val geners = arrayListOf<String>()
         movie.genres.forEach { i ->

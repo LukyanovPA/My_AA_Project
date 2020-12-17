@@ -42,13 +42,11 @@ class MovieListAdapter(
 class MovieListViewHolder(override val containerView: View): RecyclerView.ViewHolder(containerView), LayoutContainer {
 
     fun bind(movie: Movie) {
-        containerView.poster.let {
             Glide.with(containerView.context)
                 .load(movie.poster)
                 .centerCrop()
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                 .into(containerView.poster)
-        }
 
         val resId: Int = if (movie.numberOfRatings > 1000) {
             R.drawable.vector_like
@@ -64,11 +62,11 @@ class MovieListViewHolder(override val containerView: View): RecyclerView.ViewHo
         with(containerView) {
             likeView.setImageResource(resId)
             minimumAge.text = context.getString(R.string.some_id, movie.minimumAge)
-            genres?.text = geners.joinToString()
-            ratingBar?.rating = movie.ratings.div(2)
-            numberOfRatings?.text = context.getString(R.string.votes, movie.numberOfRatings)
-            movieName?.text = movie.title
-            timeMovie?.text = context.getString(R.string.movie_time, movie.runtime)
+            genres.text = geners.joinToString()
+            ratingBar.rating = movie.ratings.div(2)
+            numberOfRatings.text = context.getString(R.string.votes, movie.numberOfRatings)
+            movieName.text = movie.title
+            timeMovie.text = context.getString(R.string.movie_time, movie.runtime)
         }
     }
 
