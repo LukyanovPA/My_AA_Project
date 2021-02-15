@@ -1,16 +1,5 @@
 package com.pavellukyanov.myaaproject.utils
 
-class DataUtils {
-}
-
-object ImageBaseUrl {
-    var IMAGE_BASE_URL = ""
-}
-
-object GenresMap {
-    val genres = mutableMapOf<Int, String>()
-}
-
 object PosterSizeList {
     var posterSizes: List<String>? = emptyList()
 }
@@ -25,7 +14,15 @@ enum class PosterSizes(val size: String?) {
     ORIGINAL(PosterSizeList.posterSizes?.get(6))
 }
 
-object Adult{
-    const val ADULT= 18
-    const val NOT_ADULT= 0
+class RuntimeMovie {
+    fun getRuntime(runtime: Int): String {
+        val hour = runtime / 60
+        val minute = runtime % 60
+        return "$hour.$minute"
+    }
+}
+
+object Adult {
+    const val ADULT = 18
+    const val NOT_ADULT = 0
 }

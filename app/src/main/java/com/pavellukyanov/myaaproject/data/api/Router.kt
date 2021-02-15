@@ -9,6 +9,7 @@ class Router {
     private val authInterceptor = Interceptor { chain ->
         val newUrl = chain.request().url
             .newBuilder()
+            .addQueryParameter(API_KEY, API_KEY_VALUE)
             .build()
 
         val newRequest = chain.request()

@@ -21,7 +21,7 @@
     <string name="_13">13+</string>
     <string name="reviews">125 Reviews</string>
     <string name="movie_name">Avengers: End Game</string>
-    <string name="movie_time">%d MIN</string>
+    <string name="movie_time">MIN</string>
     <string name="actor_photo">Actor Photo</string>
 
 </resources>

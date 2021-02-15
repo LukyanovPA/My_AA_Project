@@ -2,8 +2,6 @@ package com.pavellukyanov.myaaproject.data.models
 
 import com.google.gson.annotations.SerializedName
 import com.pavellukyanov.myaaproject.utils.Adult
-import com.pavellukyanov.myaaproject.utils.GenresMap
-import com.pavellukyanov.myaaproject.utils.ImageBaseUrl
 import com.pavellukyanov.myaaproject.utils.PosterSizes
 
 class PopularMovieResponse (
@@ -11,6 +9,23 @@ class PopularMovieResponse (
    @SerializedName("results") var results : List<Movie>,
    @SerializedName("total_pages") var totalPages : Int,
    @SerializedName("total_results") var totalResults : Int
+)
+
+class NowPlayingResponse (
+   @SerializedName("dates") var dates : Dates,
+   @SerializedName("page") var page : Int,
+   @SerializedName("results") var results : List<Movie>,
+   @SerializedName("total_pages") var totalPages : Int,
+   @SerializedName("total_results") var totalResults : Int
+)
+
+class Dates (
+   @SerializedName("maximum") var maximum : String,
+   @SerializedName("minimum") var minimum : String
+)
+
+class MovieId(
+   @SerializedName("runtime") var runtime : Int
 )
 
 class Movie (
@@ -26,17 +41,11 @@ class Movie (
    @SerializedName("release_date") var releaseDate : String,
    @SerializedName("title") var title : String,
    @SerializedName("video") var video : Boolean,
-   @SerializedName("vote_average") var voteAverage : Double,
+   @SerializedName("vote_average") var voteAverage : Double = 0.0,
    @SerializedName("vote_count") var voteCount : Int
 ) {
-   var moviePoster: String = ImageBaseUrl.IMAGE_BASE_URL + PosterSizes.W500.size + posterPath
-   val rating: Float = (voteAverage / 2).toFloat()
+   var moviePoster: String = ""
    val minimumAge: Int = if (adult) Adult.ADULT else Adult.NOT_ADULT
-   val genre: () -> String = {
-      val genres = mutableListOf<String>()
-      genreIds?.forEach {
-         genres.add(GenresMap.genres.getValue(it))
-      }
-      genres.joinToString()
-   }
+   var genres = mutableListOf<String>()
+   var runtime: Int = 0
 }

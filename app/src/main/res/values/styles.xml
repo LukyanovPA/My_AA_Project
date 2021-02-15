@@ -24,6 +24,7 @@
     <style name="CustomRatingBar" parent="android:style/Widget.Material.RatingBar.Small">
         <item name="android:numStars">5</item>
         <item name="android:rating">4</item>
+        <item name="android:stepSize">0.5</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:progressTint">@color/tag</item>
