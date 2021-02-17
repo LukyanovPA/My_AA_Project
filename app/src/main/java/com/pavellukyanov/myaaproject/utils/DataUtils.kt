@@ -26,3 +26,10 @@ object Adult {
     const val ADULT = 18
     const val NOT_ADULT = 0
 }
+
+enum class MovieCategory {
+    POPULAR,
+    NOW_PLAYING,
+    TOP_RATED,
+    UPCOMING
+}

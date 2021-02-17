@@ -55,8 +55,6 @@ class MovieListAdapter(
                 ratingBar.rating = rating
                 numberOfRatings.text = itemView.context.getString(R.string.votes, movie.voteCount)
                 movieName.text = movie.title
-                //парсить продолжительность фильма из movie
-                timeMovie.text = "${RuntimeMovie().getRuntime(movie.runtime)} ${itemView.context.getString(R.string.movie_time)}"
             }
         }
 

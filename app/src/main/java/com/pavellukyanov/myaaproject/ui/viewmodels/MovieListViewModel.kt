@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.pavellukyanov.myaaproject.data.models.*
 import com.pavellukyanov.myaaproject.data.repository.RepositoryInterface
+import com.pavellukyanov.myaaproject.utils.MovieCategory
 import kotlinx.coroutines.*
 
 class MovieListViewModel(
@@ -14,44 +15,15 @@ class MovieListViewModel(
     })
     private var _movieList: MutableLiveData<List<Movie>> = MutableLiveData()
     private val movieList: LiveData<List<Movie>> get() = _movieList
-    private var _runtimeForIds: MutableLiveData<MutableMap<Int, Int>> = MutableLiveData()
-    private var runtimeMap: MutableMap<Int, Int> = mutableMapOf()
 
-    private fun selectMovieList() {
+    private fun selectMovieList(methodName: MovieCategory) {
         viewModelScope.launch(Dispatchers.IO + handler) {
-//            _movieList.postValue(repositoryInterface.getPopularMovies())
-            _movieList.postValue(repositoryInterface.getNowPlaying())
+            _movieList.postValue(repositoryInterface.getMoviesWithGenres(methodName))
         }
     }
 
-    private fun selectRuntime(list: List<Movie>) {
-        viewModelScope.launch(Dispatchers.IO + handler) {
-            val tempListMovieWithRuntime: MutableList<Movie> = mutableListOf()
-            for (movie in list) {
-                movie.runtime = repositoryInterface.getMovieId(movie.id)
-                Log.d("MoTi", "selectRuntime - ${movie.runtime}")
-                tempListMovieWithRuntime.add(movie)
-            }
-            Log.d("MoTi", "selectRuntime - ${tempListMovieWithRuntime.size}")
-            _movieList.postValue(tempListMovieWithRuntime)
-        }
-
-
-//        _movieList.observeForever { listMovie ->
-//            listMovie?.let {
-//                viewModelScope.launch(Dispatchers.IO + handler) {
-//                    listMovie.forEach {
-//                        val runtime: Int = repositoryInterface.getMovieId(it.id)
-//                        runtimeMap.put(it.id, runtime)
-//                    }
-//                    _movieList.value?.get(0)?.runtime = 1
-//                }
-//            }
-//        }
-    }
-
-    fun getMovie(): LiveData<List<Movie>> {
-        selectMovieList()
+    fun getMovie(methodName: MovieCategory): LiveData<List<Movie>> {
+        selectMovieList(methodName)
         return movieList
     }
 

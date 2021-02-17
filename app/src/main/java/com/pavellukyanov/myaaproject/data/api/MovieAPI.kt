@@ -10,10 +10,19 @@ interface MovieAPI {
     suspend fun getPopularMovies(
 //        @Query("language") language: String,
 //        @Query("page") page: Int
-    ): PopularMovieResponse
+    ): PopularMovieAndTopRatedResponse
+
+    @GET("movie/top_rated")
+    suspend fun getTopRatedMovies(
+//        @Query("language") language: String,
+//        @Query("page") page: Int
+    ): PopularMovieAndTopRatedResponse
 
     @GET("movie/now_playing")
-    suspend fun getNowPlaying(): NowPlayingResponse
+    suspend fun getNowPlaying(): NowPlayingAndUpcomingResponse
+
+    @GET("movie/upcoming")
+    suspend fun getUpcoming(): NowPlayingAndUpcomingResponse
 
     @GET("genre/movie/list")
     suspend fun getAllGenres(): GenreResponse
@@ -23,6 +32,6 @@ interface MovieAPI {
 
     @GET("movie/{movie_id}")
     suspend fun getMovieId(
-        @Path("{movie_id}") movieId: Int
+        @Path("movie_id") movieId: Int
     ): MovieId
 }

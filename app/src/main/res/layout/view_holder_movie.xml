@@ -101,25 +101,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
             android:layout_marginTop="8dp"
+            android:layout_marginBottom="3dp"
             android:fontFamily="@font/robotoblack"
             android:text="@string/movie_name"
             android:textColor="@color/nameText"
             android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/poster" />
-
-        <TextView
-            android:id="@+id/timeMovie"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/movie_time"
-            android:textAllCaps="true"
-            android:textColor="@color/color_reviews"
-            android:textSize="8sp"
-            android:fontFamily="@font/robotoblack"
-            app:layout_constraintStart_toStartOf="@+id/movieName"
-            app:layout_constraintTop_toBottomOf="@+id/movieName"
-            tools:ignore="SmallSp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
