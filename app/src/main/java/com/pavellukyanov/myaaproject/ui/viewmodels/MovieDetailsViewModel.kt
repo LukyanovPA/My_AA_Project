@@ -14,40 +14,17 @@ import java.lang.Exception
 class MovieDetailsViewModel(
     private val repositoryInterface: RepositoryInterface
 ) : ViewModel() {
-    private val handler = CoroutineExceptionHandler(handler = { _, error ->
-        Log.d(LOG_TAG, "${error.message}")
-    })
-    private val _movieDetailsMutLiveData: MutableLiveData<MovieDetails> = MutableLiveData()
-    private val _creditsMutLiveData: MutableLiveData<Credits> = MutableLiveData()
-    private val movieDetailsLiveData: LiveData<MovieDetails> get() = _movieDetailsMutLiveData
-    private val creditsLiveData: LiveData<Credits> get() = _creditsMutLiveData
 
-    fun selectMovieDetails(movieId: Int) {
-        viewModelScope.launch(Dispatchers.IO + handler) {
-            _movieDetailsMutLiveData.postValue(repositoryInterface.getMovieDetailsWithGenres(movieId))
-        }
-    }
-
-    fun getMovieDetailsTest(movieId: Int) = liveData(Dispatchers.IO) {
+    fun getMovieCredits(movieId: Int) = liveData(Dispatchers.IO) {
         emit(Resource.loading(data = null))
         try {
-            emit(Resource.success(data = repositoryInterface.getMovieDetailsWithGenres(movieId)))
+            emit(Resource.success(data = repositoryInterface.getCreditsWithPosterUrl(movieId)))
         } catch (exception: Exception) {
-            emit(Resource.error(data = null, message = exception.message ?: "Error Occurred!"))
+            emit(Resource.error(data = null, message = exception.message ?: ERROR_MESSAGE))
         }
     }
-
-    fun getMovieDetails(): LiveData<MovieDetails> = movieDetailsLiveData
-
-    fun selectCredits(movieId: Int) {
-        viewModelScope.launch(Dispatchers.IO + handler) {
-            _creditsMutLiveData.postValue(repositoryInterface.getCreditsWithPosterUrl(movieId))
-        }
-    }
-
-    fun getCredits(): LiveData<Credits> = creditsLiveData
 
     companion object {
-        private const val LOG_TAG = "MovieDetailsViewModel"
+        private const val ERROR_MESSAGE = "Error Occurred!"
     }
 }

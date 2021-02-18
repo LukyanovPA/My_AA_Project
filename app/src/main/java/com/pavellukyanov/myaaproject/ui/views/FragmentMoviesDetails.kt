@@ -2,27 +2,20 @@ package com.pavellukyanov.myaaproject.ui.views
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.pavellukyanov.myaaproject.R
 import com.pavellukyanov.myaaproject.data.api.MoviesRemoteRepo
 import com.pavellukyanov.myaaproject.data.api.Router
 import com.pavellukyanov.myaaproject.data.models.Credits
-import com.pavellukyanov.myaaproject.data.models.old.Actor
 import com.pavellukyanov.myaaproject.data.models.Movie
-import com.pavellukyanov.myaaproject.data.models.MovieDetails
 import com.pavellukyanov.myaaproject.databinding.FragmentMoviesDetailsBinding
 import com.pavellukyanov.myaaproject.ui.adapters.ActorsAdapter
 import com.pavellukyanov.myaaproject.ui.base.DetailsViewModelFactory
 import com.pavellukyanov.myaaproject.ui.viewmodels.MovieDetailsViewModel
-import com.pavellukyanov.myaaproject.utils.Resource
 import com.pavellukyanov.myaaproject.utils.Status
-import kotlinx.android.synthetic.main.view_holder_movie.*
 
 class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
     private val detailsViewModel: MovieDetailsViewModel by viewModels {
@@ -40,9 +33,14 @@ class FragmentMoviesDetails : Fragment(R.layout.fragment_movies_details) {
     }
 
     private fun subscribeMovieDetailsViewModel(movieId: Int) {
-        detailsViewModel.selectCredits(movieId)
-        detailsViewModel.getCredits().observe(this.viewLifecycleOwner, { credits ->
-            initCreditsAdapter(credits)
+        detailsViewModel.getMovieCredits(movieId).observe(this.viewLifecycleOwner, { resourceMovieCredits ->
+            resourceMovieCredits?.let {
+                when(resourceMovieCredits.status) {
+                    Status.SUCCESS -> {
+                        resourceMovieCredits.data?.let { initCreditsAdapter(it) }
+                    }
+                }
+            }
         })
     }
 

@@ -19,6 +19,7 @@ import com.pavellukyanov.myaaproject.ui.base.MovieListViewModelFactory
 import com.pavellukyanov.myaaproject.ui.viewmodels.MovieDetailsViewModel
 import com.pavellukyanov.myaaproject.ui.viewmodels.MovieListViewModel
 import com.pavellukyanov.myaaproject.utils.MovieCategory
+import com.pavellukyanov.myaaproject.utils.Status
 
 class FragmentMoviesList : Fragment(R.layout.fragment_movies_list) {
     private val movieListViewModel: MovieListViewModel by viewModels {
@@ -41,8 +42,14 @@ class FragmentMoviesList : Fragment(R.layout.fragment_movies_list) {
     }
 
     private fun subscribeViewModel(category: MovieCategory) {
-        movieListViewModel.getMovie(category).observe(this.viewLifecycleOwner, { response ->
-            initRecycler(response)
+        movieListViewModel.getMovieList(category).observe(this.viewLifecycleOwner, { resourceMovieList ->
+            resourceMovieList?.let {
+                when(resourceMovieList.status) {
+                    Status.SUCCESS -> {
+                        resourceMovieList.data?.let { it1 -> initRecycler(it1) }
+                    }
+                }
+            }
         })
     }
 
