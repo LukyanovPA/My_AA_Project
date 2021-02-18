@@ -16,7 +16,13 @@ interface RepositoryInterface {
 
     suspend fun getUpcoming(): List<Movie>
 
-    suspend fun getMovieId(movieId: Int): Int
+    suspend fun getMovieId(movieId: Int): MovieDetails
+
+    suspend fun getCredits(movieId: Int): Credits
+
+    suspend fun getCreditsWithPosterUrl(movieId: Int): Credits
+
+    suspend fun getMovieDetailsWithGenres(movieId: Int): MovieDetails
 
     suspend fun getMoviesWithGenres(methodName: MovieCategory): List<Movie>
 }

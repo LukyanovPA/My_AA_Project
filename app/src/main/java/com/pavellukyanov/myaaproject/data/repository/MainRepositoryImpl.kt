@@ -7,45 +7,71 @@ import com.pavellukyanov.myaaproject.utils.MovieCategory
 import com.pavellukyanov.myaaproject.utils.PosterSizeList
 import com.pavellukyanov.myaaproject.utils.PosterSizes
 import kotlinx.coroutines.*
+import java.util.*
 
 class MainRepositoryImpl(private val moviesRemoteRepo: MoviesRemoteRepo) : RepositoryInterface {
+    private var language: String = ""
     private lateinit var finallyMovieList: MutableList<Movie>
-    private val handler = CoroutineExceptionHandler(handler = { _, error ->
-        Log.d(LOG_TAG, "${error.message}")
-    })
-    private val scope = CoroutineScope(
-        SupervisorJob()
-                + Dispatchers.IO
-                + handler
-    )
+    private lateinit var finallyMovieDetails: MovieDetails
+    private lateinit var finallyCredits: Credits
+    private lateinit var config: Images
+    private lateinit var genresMap: MutableMap<Int, String>
 
-    override suspend fun getPopularMovies(): List<Movie> = scope.async { moviesRemoteRepo.getPopularMovies().results }.await()
+    override suspend fun getPopularMovies(): List<Movie> = moviesRemoteRepo.getPopularMovies(language).results
 
-    override suspend fun getTopRatedMovies(): List<Movie> = scope.async { moviesRemoteRepo.getTopRatedMovies().results }.await()
+    override suspend fun getTopRatedMovies(): List<Movie> = moviesRemoteRepo.getTopRatedMovies(language).results
 
-    override suspend fun getAllGenres(): List<Genres> = scope.async { moviesRemoteRepo.getAllGenres().genres }.await()
+    override suspend fun getAllGenres(): List<Genres> = moviesRemoteRepo.getAllGenres(language).genres
 
-    override suspend fun getConfiguration(): Images = scope.async { moviesRemoteRepo.getConfiguration().images }.await()
+    override suspend fun getConfiguration(): Images = moviesRemoteRepo.getConfiguration().images
 
-    override suspend fun getNowPlaying(): List<Movie> = scope.async { moviesRemoteRepo.getNowPlaying().results }.await()
+    override suspend fun getNowPlaying(): List<Movie> = moviesRemoteRepo.getNowPlaying(language).results
 
-    override suspend fun getUpcoming(): List<Movie> = scope.async { moviesRemoteRepo.getUpcoming().results }.await()
+    override suspend fun getUpcoming(): List<Movie> = moviesRemoteRepo.getUpcoming(language).results
 
-    override suspend fun getMovieId(movieId: Int): Int = moviesRemoteRepo.getMovieId(movieId).runtime
+    override suspend fun getMovieId(movieId: Int): MovieDetails = moviesRemoteRepo.getMovieId(movieId)
+
+    override suspend fun getCredits(movieId: Int): Credits = moviesRemoteRepo.getCredits(movieId, language)
+
+    override suspend fun getCreditsWithPosterUrl(movieId: Int): Credits {
+        setLanguage()
+            val tempCredits = getCredits(movieId)
+            setupImageConfig()
+            tempCredits.cast.forEach {
+                it.profilePoster = "${config.secureBaseUrl}/${PosterSizes.W500.size}/${it.profilePath}"
+            }
+            tempCredits.crew.forEach {
+                it.profilePath = "${config.secureBaseUrl}/${PosterSizes.W500.size}/${it.profilePath}"
+            }
+            finallyCredits = tempCredits
+        return finallyCredits
+    }
+
+    override suspend fun getMovieDetailsWithGenres(movieId: Int): MovieDetails {
+        setLanguage()
+        val tempMovieDetails = getMovieId(movieId)
+        Log.d("tttt", tempMovieDetails.overview)
+
+        setupImageConfig()
+        setupGenresMap()
+        tempMovieDetails.moviePoster = "${config.secureBaseUrl}/${PosterSizes.W500.size}/${tempMovieDetails.posterPath}"
+        tempMovieDetails.finallyGenres = mutableListOf()
+        tempMovieDetails.genres.forEach {
+            genresMap.get(it.id)?.let { it1 -> tempMovieDetails.finallyGenres.add(it1) }
+        }
+        finallyMovieDetails = tempMovieDetails
+        Log.d("tttt", finallyMovieDetails.overview)
+        return finallyMovieDetails
+    }
 
     override suspend fun getMoviesWithGenres(methodName: MovieCategory): List<Movie> {
-        val job = scope.launch {
+        setLanguage()
             finallyMovieList = mutableListOf()
             val movieList: MutableList<Movie> = mutableListOf()
-            val config: Images = getConfiguration()
-            PosterSizeList.posterSizes = config.posterSizes
+            setupImageConfig()
 
             //get Genres list and put in map
-            val genresMap: MutableMap<Int, String> = mutableMapOf()
-            val genresTemp: List<Genres> = getAllGenres()
-            genresTemp.forEach {
-                genresMap.put(it.id, it.name)
-            }
+            setupGenresMap()
 
             //get List<Movie> without Genres and PosterUrl
             when (methodName) {
@@ -83,12 +109,35 @@ class MainRepositoryImpl(private val moviesRemoteRepo: MoviesRemoteRepo) : Repos
             }
             finallyMovieList.clear()
             finallyMovieList = tempList
-        }
-        job.join()
         return finallyMovieList
+    }
+
+    private suspend fun setupImageConfig() {
+            config = getConfiguration()
+            PosterSizeList.posterSizes = config.posterSizes
+    }
+
+    private suspend fun setupGenresMap(): Map<Int, String> {
+            genresMap = mutableMapOf()
+            val genresTemp: List<Genres> = getAllGenres()
+            genresTemp.forEach {
+                genresMap.put(it.id, it.name)
+            }
+        return genresMap
+    }
+
+    private fun setLanguage() {
+        val lang: String = Locale.getDefault().language
+        if (lang == "ru") {
+            language = RU
+        } else {
+            language = EN
+        }
     }
 
     companion object {
         private const val LOG_TAG = "MainRepoImpl"
+        private const val RU = "ru-RU"
+        private const val EN = "en-US"
     }
 }

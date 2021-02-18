@@ -6,35 +6,68 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Smot" />
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="yyyy" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93535ef1-b81f-46a1-9797-04fa2430bac3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_ktx_1_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_ktx_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_ktx_1_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_ktx_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_ktx_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/MovieDetailsResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/base/DetailsViewModelFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/viewmodels/MovieDetailsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_3_0_rc01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/My_AA_Project.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/My_AA_Project.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/api/MovieAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/api/MovieAPI.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/api/MoviesRemoteRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/api/MoviesRemoteRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/PopularMovieResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/MovieResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/MovieResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/MovieResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/repository/MainRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/repository/MainRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/repository/RepositoryInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/repository/RepositoryInterface.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/adapters/MovieListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/adapters/MovieListAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/base/GenresViewModelFactory.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/base/MainActivityViewModelFactory.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/viewmodels/GenresViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/viewmodels/MainActivityViewModel.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/viewmodels/MovieListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/viewmodels/MovieListViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/adapters/ActorsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/adapters/ActorsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/FragmentMoviesDetails.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/FragmentMoviesDetails.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/FragmentMoviesList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/FragmentMoviesList.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/utils/DataUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/utils/DataUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_holder_movie.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_holder_movie.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movies_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movies_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_holder_actor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_holder_actor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[D6M4C20110018806]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Nexus_5X_API_27]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -59,14 +92,16 @@
         <option value="Kotlin Object" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Enum" />
+        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="#8.1_test_logic_in_repo" />
+        <entry key="$PROJECT_DIR$" value="#8.2test_coroutine" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -296,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613416965944</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Закончен FragmentMovieList">
+      <created>1613551487252</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613551487252</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -306,7 +348,8 @@
     <MESSAGE value="Домашка #5" />
     <MESSAGE value="Домашка #5 done" />
     <MESSAGE value="Реализация MVVM" />
-    <option name="LAST_COMMIT_MESSAGE" value="Реализация MVVM" />
+    <MESSAGE value="Закончен FragmentMovieList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Закончен FragmentMovieList" />
   </component>
   <component name="WindowStateProjectService">
     <state x="525" y="255" key="#Notifications" timestamp="1607587575207">
@@ -345,26 +388,26 @@
       <screen x="0" y="23" width="1280" height="725" />
     </state>
     <state x="405" y="184" width="766" height="403" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1280.725@0.23.1280.725" timestamp="1612188825927" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1613416965315">
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1613551486589">
       <screen x="0" y="23" width="1280" height="725" />
     </state>
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.725@0.23.1280.725" timestamp="1613416965315" />
-    <state width="1238" height="181" key="GridCell.Tab.0.bottom" timestamp="1613505062655">
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.725@0.23.1280.725" timestamp="1613551486589" />
+    <state width="1238" height="181" key="GridCell.Tab.0.bottom" timestamp="1613591893305">
       <screen x="0" y="23" width="1280" height="725" />
     </state>
-    <state width="1238" height="181" key="GridCell.Tab.0.bottom/0.23.1280.725@0.23.1280.725" timestamp="1613505062655" />
-    <state width="1238" height="181" key="GridCell.Tab.0.center" timestamp="1613505062655">
+    <state width="1238" height="181" key="GridCell.Tab.0.bottom/0.23.1280.725@0.23.1280.725" timestamp="1613591893305" />
+    <state width="1238" height="181" key="GridCell.Tab.0.center" timestamp="1613591893304">
       <screen x="0" y="23" width="1280" height="725" />
     </state>
-    <state width="1238" height="181" key="GridCell.Tab.0.center/0.23.1280.725@0.23.1280.725" timestamp="1613505062655" />
-    <state width="1238" height="181" key="GridCell.Tab.0.left" timestamp="1613505062654">
+    <state width="1238" height="181" key="GridCell.Tab.0.center/0.23.1280.725@0.23.1280.725" timestamp="1613591893304" />
+    <state width="1238" height="181" key="GridCell.Tab.0.left" timestamp="1613591893303">
       <screen x="0" y="23" width="1280" height="725" />
     </state>
-    <state width="1238" height="181" key="GridCell.Tab.0.left/0.23.1280.725@0.23.1280.725" timestamp="1613505062654" />
-    <state width="1238" height="181" key="GridCell.Tab.0.right" timestamp="1613505062655">
+    <state width="1238" height="181" key="GridCell.Tab.0.left/0.23.1280.725@0.23.1280.725" timestamp="1613591893303" />
+    <state width="1238" height="181" key="GridCell.Tab.0.right" timestamp="1613591893304">
       <screen x="0" y="23" width="1280" height="725" />
     </state>
-    <state width="1238" height="181" key="GridCell.Tab.0.right/0.23.1280.725@0.23.1280.725" timestamp="1613505062655" />
+    <state width="1238" height="181" key="GridCell.Tab.0.right/0.23.1280.725@0.23.1280.725" timestamp="1613591893304" />
     <state x="128" y="84" key="MergeDialog" timestamp="1607541571509">
       <screen x="0" y="23" width="1280" height="725" />
     </state>
@@ -373,10 +416,10 @@
       <screen x="0" y="23" width="1280" height="725" />
     </state>
     <state x="149" y="24" key="SettingsEditor/0.23.1280.725@0.23.1280.725" timestamp="1607847650703" />
-    <state x="240" y="125" key="Vcs.Push.Dialog.v2" timestamp="1613416967850">
+    <state x="240" y="125" key="Vcs.Push.Dialog.v2" timestamp="1613551488940">
       <screen x="0" y="23" width="1280" height="725" />
     </state>
-    <state x="240" y="125" key="Vcs.Push.Dialog.v2/0.23.1280.725@0.23.1280.725" timestamp="1613416967850" />
+    <state x="240" y="125" key="Vcs.Push.Dialog.v2/0.23.1280.725@0.23.1280.725" timestamp="1613551488940" />
     <state x="100" y="123" width="1080" height="525" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613398867533">
       <screen x="0" y="23" width="1280" height="725" />
     </state>
