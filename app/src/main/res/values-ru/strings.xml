@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="category_popular">Популярные фильмы</string>
+    <string name="category_now_playing">Сейчас смотрят</string>
+    <string name="back">Назад</string>
+    <string name="votes">%d ГОЛОСОВ</string>
+    <string name="story_line">Описание</string>
+    <string name="casts">Актеры</string>
+    <string name="category_top_rated">Самые рейтинговые</string>
+    <string name="category_upcoming">Скоро в прокате</string>
+</resources>

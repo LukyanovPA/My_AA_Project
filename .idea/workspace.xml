@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="yyyy" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93535ef1-b81f-46a1-9797-04fa2430bac3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_ktx_1_2_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_collection_collection_ktx_1_1_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_ktx_1_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_ktx_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_savedstate_2_3_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_ktx_1_1_0_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_9_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/MovieDetailsResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/base/DetailsViewModelFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/viewmodels/MovieDetailsViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-ru/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_activity_activity_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_fragment_fragment_1_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_common_2_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_runtime_2_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_2_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_2_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_viewmodel_ktx_2_2_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_savedstate_savedstate_1_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_3_0_rc01_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_android_material_material_1_3_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_retrofit2_converter_gson_2_7_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_13_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/My_AA_Project.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/My_AA_Project.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/api/MovieAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/api/MovieAPI.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/api/MoviesRemoteRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/api/MoviesRemoteRepo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/MovieResponse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/MovieResponse.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/repository/MainRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/repository/MainRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/repository/RepositoryInterface.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/repository/RepositoryInterface.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/adapters/ActorsAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/adapters/ActorsAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/FragmentMoviesDetails.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/FragmentMoviesDetails.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/FragmentMoviesList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/FragmentMoviesList.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/ui/views/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movies_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_movies_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/view_holder_actor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/view_holder_actor.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Nexus_5X_API_27]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Enum" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+        <option value="valueResourceFile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="#8.2test_coroutine" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1lQtsXMKxUEe8Ra5IXUMSNF3LIP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="D6M4C20110018806" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-02-10T18:53:21.804Z" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android-custom-view/Users/lukyanovpavel/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models" />
+    <property name="multi-representation-preview/Users/lukyanovpavel/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_selected" value="Custom views" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models/old" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models.old" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.pavellukyanov.myaaproject.ui" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.pavellukyanov.myaaproject.ui.fragments" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject/data/models" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/pavellukyanov/myaaproject" />
+      <recent name="$PROJECT_DIR$/app/src/main" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="My_AA_Project.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="My_AA_Project.app" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="My_AA_Project.app" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93535ef1-b81f-46a1-9797-04fa2430bac3" name="Default Changelist" comment="" />
+      <created>1607541349192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607541349192</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Выполнена Домашка #4">
+      <created>1607542043990</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607542043990</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Выполнена Домашка #4">
+      <created>1607542272863</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607542272863</updated>
+    </task>
+    <task id="LOCAL-00003" summary=".gitignore">
+      <created>1607543135903</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607543135903</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Отредактирована Домашка #4 с учетом комментариев">
+      <created>1607587279978</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607587279978</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Домашка #5">
+      <created>1607591132139</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607591132139</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Домашка #5 done">
+      <created>1607775532958</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607775532958</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Домашка #5 done">
+      <created>1608215169706</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608215169706</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Реализация MVVM">
+      <created>1612954407664</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1612954407664</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Реализация MVVM">
+      <created>1613416965943</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613416965944</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Закончен FragmentMovieList">
+      <created>1613551487252</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613551487252</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Выполнена Домашка #4" />
+    <MESSAGE value=".gitignore" />
+    <MESSAGE value="Отредактирована Домашка #4 с учетом комментариев" />
+    <MESSAGE value="Домашка #5" />
+    <MESSAGE value="Домашка #5 done" />
+    <MESSAGE value="Реализация MVVM" />
+    <MESSAGE value="Закончен FragmentMovieList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Закончен FragmentMovieList" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="525" y="255" key="#Notifications" timestamp="1607587575207">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="525" y="255" key="#Notifications/0.23.1280.725@0.23.1280.725" timestamp="1607587575207" />
+    <state x="378" y="147" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1613501566423">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="378" y="147" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1280.725@0.23.1280.725" timestamp="1613501566423" />
+    <state x="689" y="112" key="#com.intellij.ide.util.MemberChooser" timestamp="1612974041114">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="689" y="112" key="#com.intellij.ide.util.MemberChooser/0.23.1280.725@0.23.1280.725" timestamp="1612974041114" />
+    <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1612187883515">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="328" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1280.725@0.23.1280.725" timestamp="1612187883515" />
+    <state x="109" y="307" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1612188598670">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="109" y="307" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.23.1280.725@0.23.1280.725" timestamp="1612188598670" />
+    <state x="414" y="274" width="620" height="223" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1612188602644">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="414" y="274" width="620" height="223" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.23.1280.725@0.23.1280.725" timestamp="1612188602644" />
+    <state x="308" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1613491027594">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="308" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1280.725@0.23.1280.725" timestamp="1613491027594" />
+    <state x="378" y="139" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607772025303">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="378" y="139" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1280.725@0.23.1280.725" timestamp="1607772025303" />
+    <state x="405" y="184" width="766" height="403" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1612188825927">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="405" y="184" width="766" height="403" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1280.725@0.23.1280.725" timestamp="1612188825927" />
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1613551486589">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.725@0.23.1280.725" timestamp="1613551486589" />
+    <state width="1238" height="181" key="GridCell.Tab.0.bottom" timestamp="1613591893305">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state width="1238" height="181" key="GridCell.Tab.0.bottom/0.23.1280.725@0.23.1280.725" timestamp="1613591893305" />
+    <state width="1238" height="181" key="GridCell.Tab.0.center" timestamp="1613591893304">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state width="1238" height="181" key="GridCell.Tab.0.center/0.23.1280.725@0.23.1280.725" timestamp="1613591893304" />
+    <state width="1238" height="181" key="GridCell.Tab.0.left" timestamp="1613591893303">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state width="1238" height="181" key="GridCell.Tab.0.left/0.23.1280.725@0.23.1280.725" timestamp="1613591893303" />
+    <state width="1238" height="181" key="GridCell.Tab.0.right" timestamp="1613591893304">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state width="1238" height="181" key="GridCell.Tab.0.right/0.23.1280.725@0.23.1280.725" timestamp="1613591893304" />
+    <state x="128" y="84" key="MergeDialog" timestamp="1607541571509">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="128" y="84" key="MergeDialog/0.23.1280.725@0.23.1280.725" timestamp="1607541571509" />
+    <state x="149" y="24" key="SettingsEditor" timestamp="1607847650703">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="149" y="24" key="SettingsEditor/0.23.1280.725@0.23.1280.725" timestamp="1607847650703" />
+    <state x="240" y="125" key="Vcs.Push.Dialog.v2" timestamp="1613551488940">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="240" y="125" key="Vcs.Push.Dialog.v2/0.23.1280.725@0.23.1280.725" timestamp="1613551488940" />
+    <state x="100" y="123" width="1080" height="525" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1613398867533">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="100" y="123" width="1080" height="525" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1280.725@0.23.1280.725" timestamp="1613398867533" />
+    <state x="431" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607762800086">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="431" y="306" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.725@0.23.1280.725" timestamp="1607762800086" />
+    <state x="390" y="105" key="git4idea.branch.GitSmartOperationDialog" timestamp="1607541536306">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="390" y="105" key="git4idea.branch.GitSmartOperationDialog/0.23.1280.725@0.23.1280.725" timestamp="1607541536306" />
+    <state x="305" y="72" key="search.everywhere.popup" timestamp="1607583264495">
+      <screen x="0" y="23" width="1280" height="725" />
+    </state>
+    <state x="305" y="72" key="search.everywhere.popup/0.23.1280.725@0.23.1280.725" timestamp="1607583264495" />
+  </component>
+</project>
