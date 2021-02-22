@@ -1,14 +1,11 @@
 package com.pavellukyanov.myaaproject.ui.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.pavellukyanov.myaaproject.R
-import com.pavellukyanov.myaaproject.data.models.Cast
-import com.pavellukyanov.myaaproject.data.models.old.Actor
+import com.pavellukyanov.myaaproject.data.models.networkmodels.Cast
 import com.pavellukyanov.myaaproject.databinding.ViewHolderActorBinding
 
 class ActorsAdapter : RecyclerView.Adapter<ActorsViewHolder>() {

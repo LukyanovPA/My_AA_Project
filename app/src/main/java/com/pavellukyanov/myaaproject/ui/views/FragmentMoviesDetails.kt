@@ -2,6 +2,7 @@ package com.pavellukyanov.myaaproject.ui.views
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,8 +10,7 @@ import com.bumptech.glide.Glide
 import com.pavellukyanov.myaaproject.R
 import com.pavellukyanov.myaaproject.data.api.MoviesRemoteRepo
 import com.pavellukyanov.myaaproject.data.api.Router
-import com.pavellukyanov.myaaproject.data.models.Credits
-import com.pavellukyanov.myaaproject.data.models.Movie
+import com.pavellukyanov.myaaproject.data.models.networkmodels.*
 import com.pavellukyanov.myaaproject.databinding.FragmentMoviesDetailsBinding
 import com.pavellukyanov.myaaproject.ui.adapters.ActorsAdapter
 import com.pavellukyanov.myaaproject.ui.base.DetailsViewModelFactory

@@ -1,6 +1,6 @@
 package com.pavellukyanov.myaaproject.data.api
 
-import com.pavellukyanov.myaaproject.data.models.*
+import com.pavellukyanov.myaaproject.data.models.networkmodels.*
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -36,7 +36,7 @@ interface MovieAPI {
     @GET("configuration")
     suspend fun getConfiguration(): Configuration
 
-    @GET("movie/{movie_id}")
+    @GET("movie/{movie_id}?")
     suspend fun getMovieId(
         @Path("movie_id") movieId: Int
     ): MovieDetails

@@ -16,7 +16,7 @@
     <string name="actors">Photo actors</string>
     <string name="chris_evans">Chris\nEvans</string>
     <string name="mark_ruffalo">Mark\nRuffalo</string>
-    <string name="chris_hemsworth">Chris\nHemsworth</string>
+    <string name="chris_hemsworth">Chris Hemsworth</string>
     <string name="movies_list_title">Movies list</string>
     <string name="_13">13+</string>
     <string name="reviews">125 Reviews</string>
@@ -28,5 +28,6 @@
     <string name="category_now_playing">Now Playing</string>
     <string name="category_top_rated">Top Rated</string>
     <string name="category_upcoming">Upcoming</string>
+    <string name="like_view">Like View</string>
 
 </resources>

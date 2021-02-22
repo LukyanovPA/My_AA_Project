@@ -1,4 +1,4 @@
-package com.pavellukyanov.myaaproject.data.models
+package com.pavellukyanov.myaaproject.data.models.networkmodels
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

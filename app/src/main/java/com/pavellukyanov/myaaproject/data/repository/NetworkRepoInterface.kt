@@ -1,9 +1,9 @@
 package com.pavellukyanov.myaaproject.data.repository
 
-import com.pavellukyanov.myaaproject.data.models.*
+import com.pavellukyanov.myaaproject.data.models.networkmodels.*
 import com.pavellukyanov.myaaproject.utils.MovieCategory
 
-interface RepositoryInterface {
+interface NetworkRepoInterface {
     suspend fun getPopularMovies(): List<Movie>
 
     suspend fun getTopRatedMovies(): List<Movie>

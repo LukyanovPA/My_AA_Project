@@ -9,4 +9,24 @@
     <string name="casts">Актеры</string>
     <string name="category_top_rated">Самые рейтинговые</string>
     <string name="category_upcoming">Скоро в прокате</string>
+    <string name="image_back">Картинка назад</string>
+    <string name="movie_poster">Почтер фильма</string>
+    <string name="gradient_for_movie_poster">Градиент на постер</string>
+    <string name="name">Avengers: End Game</string>
+    <string name="some_id">%d+</string>
+    <string name="tag">Action, Adventure, Fantasy</string>
+    <string name="star_icon">Звезда в рейтинге</string>
+    <string name="story_line_text">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="robert_downey_jr">Robert Downey Jr.</string>
+    <string name="actors">Фото актеров</string>
+    <string name="chris_evans">Chris Evans</string>
+    <string name="mark_ruffalo">Mark Ruffalo</string>
+    <string name="chris_hemsworth">Chris Hemsworth</string>
+    <string name="movies_list_title">Лист фильмов</string>
+    <string name="_13">13+</string>
+    <string name="reviews">125 Reviews</string>
+    <string name="movie_name">Avengers: End Game</string>
+    <string name="movie_time">MIN</string>
+    <string name="actor_photo">Actor Photo</string>
+    <string name="like_view">Like View</string>
 </resources>

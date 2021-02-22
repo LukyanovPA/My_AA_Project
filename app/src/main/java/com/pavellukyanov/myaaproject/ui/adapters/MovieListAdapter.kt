@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.pavellukyanov.myaaproject.R
-import com.pavellukyanov.myaaproject.data.models.Movie
+import com.pavellukyanov.myaaproject.data.models.networkmodels.*
 import com.pavellukyanov.myaaproject.databinding.ViewHolderMovieBinding
 import com.pavellukyanov.myaaproject.utils.RuntimeMovie
 

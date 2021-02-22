@@ -1,4 +1,4 @@
-package com.pavellukyanov.myaaproject.data.models
+package com.pavellukyanov.myaaproject.data.models.networkmodels
 
 import com.google.gson.annotations.SerializedName
 import com.pavellukyanov.myaaproject.utils.Adult
